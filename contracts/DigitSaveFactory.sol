@@ -50,5 +50,35 @@ contract DigitSaveFactory {
         return userSavingsContracts[msg.sender];
     }
 
+        function setNewSavingAccountOwner(
+        address _newOwner
+    ) external returns (bool) {
+        if (userSavingsContracts[msg.sender] == address(0)) {
+            revert TransactionFailed("Savings account does not exist");
+        }
+
+        if (userSavingsContracts[_newOwner] != address(0)) {
+            revert TransactionFailed("New account already has savings");
+        }
+
+        if (_newOwner == msg.sender) {
+            revert TransactionFailed("Invalid user");
+        }
+        console.log(address(this),"this contract");
+        address savingContract = userSavingsContracts[msg.sender];
+        (bool success , ) = savingContract.call(abi.encodeWithSignature("transferOwnership(address)",msg.sender, _newOwner));
+        if(!success){
+            revert TransactionFailed("ownership failed to transfer");
+        }
+        userSavingsContracts[_newOwner] = userSavingsContracts[msg.sender];
+        userSavingsContracts[msg.sender] = address(0);
+        emit SavingsAccountOwnershipTransfered(
+            msg.sender,
+            _newOwner,
+            block.timestamp
+        );
+        return true;
+    }
+
 
 }

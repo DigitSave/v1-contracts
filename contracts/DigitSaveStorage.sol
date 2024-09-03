@@ -4,7 +4,6 @@ pragma solidity ^0.8.24;
 import "./interfaces/AggregatorV3Interface.sol";
 import "./dependencies/Ownable.sol";
 
-
 error TransactionFailed(string message);
 
 contract DigitSaveStorage is Ownable {
@@ -15,12 +14,13 @@ contract DigitSaveStorage is Ownable {
         bool isActive;
     }
     mapping(uint => SupportedAsset) public assets;
+    mapping(address => uint) public assetPrices;
     address public feeTo;
     uint public assetId;
     uint public maximumAssetPerSavings;
     uint public minimumAssetLockPeriodInMonths;
 
-    constructor(address _owner,address _feeTo) Ownable(_owner) {
+    constructor(address _owner, address _feeTo) Ownable(_owner) {
         assetId = 1;
         maximumAssetPerSavings = 10;
         minimumAssetLockPeriodInMonths = 1;
@@ -52,15 +52,15 @@ contract DigitSaveStorage is Ownable {
         AggregatorV3Interface dataFeed = AggregatorV3Interface(_aggregator);
         uint8 decimal = dataFeed.decimals();
         (, int answer, , , ) = dataFeed.latestRoundData();
-        if(answer <= 0){
+        if (answer <= 0) {
             revert TransactionFailed("Price cannot be negative or zero");
         }
 
-        if(decimal > 18){
+        if (decimal > 18) {
             uint scaleFactor = 10 ** (decimal - 18);
             usdPrice = uint(answer) / scaleFactor;
-        }else{
-           usdPrice = uint(answer) * (10 ** (18-decimal));
+        } else {
+            usdPrice = uint(answer) * (10 ** (18 - decimal));
         }
     }
 
@@ -71,7 +71,7 @@ contract DigitSaveStorage is Ownable {
         SupportedAsset memory assetDetail = assets[_id];
         _isApprovedAsset(assetDetail.isActive);
         asset = assetDetail.asset;
-        price = _getAssetUsdPrice(assetDetail.chainLinkAggregator);
+        price = assetPrices[assetDetail.asset];
     }
 
     function setMaximumAssetPerSavings(
@@ -95,6 +95,15 @@ contract DigitSaveStorage is Ownable {
     ) external onlyOwner returns (bool) {
         _isValidAddress(_collector);
         feeTo = _collector;
+        return true;
+    }
+
+    function setAssetPrices(
+        address _asset,
+        uint _price
+    ) external onlyOwner returns (bool) {
+        _isNotZero(_price);
+        assetPrices[_asset] = _price;
         return true;
     }
 

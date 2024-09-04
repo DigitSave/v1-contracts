@@ -2,7 +2,7 @@
 pragma solidity ^0.8.24;
 
 import "./DigitSaveAccount.sol";
-import "hardhat/console.sol";
+// import "hardhat/console.sol";
 
 contract DigitSaveFactory {
     error TransactionFailed(string message);
@@ -50,7 +50,7 @@ contract DigitSaveFactory {
         return userSavingsContracts[msg.sender];
     }
 
-        function setNewSavingAccountOwner(
+    function setNewSavingAccountOwner(
         address _newOwner
     ) external returns (bool) {
         if (userSavingsContracts[msg.sender] == address(0)) {
@@ -64,12 +64,12 @@ contract DigitSaveFactory {
         if (_newOwner == msg.sender) {
             revert TransactionFailed("Invalid user");
         }
-        console.log(address(this),"this contract");
-        address savingContract = userSavingsContracts[msg.sender];
-        (bool success , ) = savingContract.call(abi.encodeWithSignature("transferOwnership(address)",msg.sender, _newOwner));
-        if(!success){
-            revert TransactionFailed("ownership failed to transfer");
-        }
+     
+        // address savingContract = userSavingsContracts[msg.sender];
+        // (bool success , ) = savingContract.call(abi.encodeWithSignature("transferOwnership(address)",msg.sender, _newOwner));
+        // if(!success){
+        //     revert TransactionFailed("ownership failed to transfer");
+        // }
         userSavingsContracts[_newOwner] = userSavingsContracts[msg.sender];
         userSavingsContracts[msg.sender] = address(0);
         emit SavingsAccountOwnershipTransfered(
@@ -79,6 +79,4 @@ contract DigitSaveFactory {
         );
         return true;
     }
-
-
 }

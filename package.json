@@ -5,16 +5,22 @@
   "main": "index.js",
   "scripts": {
     "compile": "npx hardhat compile",
-    "test": "npx hardhat test"
+    "test": "npx hardhat test",
+    "testnet-lisk-storage": "npx hardhat run scripts/storage.ts --network liskTestnet",
+    "testnet-lisk-factory": "npx hardhat run scripts/factory.ts --network liskTestnet",
+    "testnet-lisk-deploy-asset": "npx hardhat run scripts/deploy-assets.ts --network liskTestnet",
+    "testnet-lisk-add-asset": "npx hardhat run scripts/sepolia/add-asset.ts --network liskTestnet"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@types/fs-extra": "^11.0.4",
     "hardhat": "^2.22.10"
   },
   "dependencies": {
-    "@openzeppelin/contracts": "^5.0.2"
+    "@openzeppelin/contracts": "^5.0.2",
+    "fs-extra": "^11.2.0"
   }
 }

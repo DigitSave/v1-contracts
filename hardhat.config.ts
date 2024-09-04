@@ -17,7 +17,17 @@ const config: HardhatUserConfig = {
   etherscan: {
     apiKey: {
       liskTestnet: secret.listscanAPI,
-    }
+    },
+    customChains: [
+      {
+        network: "liskTestnet",
+        chainId: 4202,
+        urls: {
+          apiURL: "https://sepolia-blockscout.lisk.com/api",
+          browserURL: "https://sepolia-blockscout.lisk.com"
+        }
+      }
+    ]
   },
   sourcify:{
     enabled:true

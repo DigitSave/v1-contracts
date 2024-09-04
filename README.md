@@ -19,7 +19,9 @@
 - [Visit Third web faucet to get Lisk testnet ETH](https://thirdweb.com/lisk-sepolia-testnet)
 
 ## Guide to mint our test tokens on lisk - [USDT,USDC,WBTC,WETH,LINK]
-- Visit any of the link below find the mint function 
+- Visit any of the link below 
+  - - Connect Your wallet
+  - - find the mint function 
   - - Enter your wallet address as the (to)
   - - Enter the number (1000000000000000000000) to mint 1000 pieces of any token
 - [Mint USDT](https://sepolia-blockscout.lisk.com/address/0xb47Eda1D52C6c09dCa6F83Acd7E3eCA576f000dC?tab=write_contract)
@@ -45,7 +47,9 @@
 
 
 ## Guide to mint our test tokens on Base - [USDT,USDC,WBTC,WETH,LINK]
-- Visit any of the link below find the mint function 
+- Visit any of the link below 
+  - - Connect Your wallet
+  - - find the mint function 
   - - Enter your wallet address as the (to)
   - - Enter the number (1000000000000000000000) to mint 1000 pieces of any token
  - [Mint USDT](https://sepolia.basescan.org/address/0xf6994372B14e886d2621619be33E67a1Ef19265c#writeContract)

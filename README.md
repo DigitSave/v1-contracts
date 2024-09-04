@@ -30,6 +30,8 @@
 
 ## Get your testnet token on Lisk 
 - [Visit Third web faucet to get Lisk testnet ETH](https://thirdweb.com/lisk-sepolia-testnet)
+
+## Get your testnet token on Base 
 - [Visit Alchemy  faucet to get Base sepolia testnet ETH](https://www.alchemy.com/faucets/base-sepolia)
 
 

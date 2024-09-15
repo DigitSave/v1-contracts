@@ -11,19 +11,32 @@
     "testnet-lisk-deploy-asset": "npx hardhat run scripts/deploy-assets.ts --network liskTestnet",
     "testnet-lisk-add-asset": "npx hardhat run scripts/sepolia/add-asset.ts --network liskTestnet",
 
+    "testnet-assetChain-storage": "npx hardhat run scripts/storage.ts --network assetChainTestnet",
+    "testnet-assetChain-factory": "npx hardhat run scripts/factory.ts --network assetChainTestnet",
+    "testnet-assetChain-deploy-asset": "npx hardhat run scripts/deploy-assets.ts --network assetChainTestnet",
+    "testnet-assetChain-add-asset": "npx hardhat run scripts/sepolia/add-asset.ts --network assetChainTestnet",
+
     "testnet-lisk-verify-factory": "npx hardhat verify --network liskTestnet --constructor-args contract-args/factory.ts  0x588e75Ddf12976afEb95aBE4500924bD01dd4727",
     "testnet-lisk-verify-storage": "npx hardhat verify --network liskTestnet --constructor-args contract-args/storage.ts  0xE05d5540D2ED13D81C10D783a157F740226C2a93",
     "testnet-lisk-verify-saving": "npx hardhat verify --network liskTestnet --constructor-args contract-args/saving.ts  0x00C8F042163F224d360D38875f81BD46beab6284",
+
+    "testnet-assetChain-verify-factory": "npx hardhat verify --network assetChainTestnet --constructor-args contract-args/factory.ts  0x588e75Ddf12976afEb95aBE4500924bD01dd4727",
+    "testnet-assetChain-verify-storage": "npx hardhat verify --network assetChainTestnet --constructor-args contract-args/storage.ts  0xE05d5540D2ED13D81C10D783a157F740226C2a93",
+    "testnet-assetChain-verify-saving": "npx hardhat verify --network assetChainTestnet --constructor-args contract-args/saving.ts  0x00C8F042163F224d360D38875f81BD46beab6284",
 
 
     "testnet-lisk-verify-btc": "npx hardhat verify --contract contracts/dependencies/BTC.sol:BTC --network liskTestnet    0x94FA6257c3B182D71f88B85294B5C771451B7a69",
     "testnet-lisk-verify-eth": "npx hardhat verify --contract contracts/dependencies/ETH.sol:ETH --network liskTestnet   0x870954612eb55232423760593eE3A1d283aC7B93",
     "testnet-lisk-verify-link": "npx hardhat verify --contract contracts/dependencies/LINK.sol:LINK --network liskTestnet   0x98F3bc937aB52d5B54BF4eBD7BaB8746eC14A159",
     "testnet-lisk-verify-usdt": "npx hardhat verify --contract contracts/dependencies/USDT.sol:USDT --network liskTestnet   0xb47Eda1D52C6c09dCa6F83Acd7E3eCA576f000dC",
-    "testnet-lisk-verify-usdc": "npx hardhat verify --contract contracts/dependencies/USDC.sol:USDC --network liskTestnet   0x46Be9CcF941a8dEb257d7F29c72e06871139Fc7e"
+    "testnet-lisk-verify-usdc": "npx hardhat verify --contract contracts/dependencies/USDC.sol:USDC --network liskTestnet   0x46Be9CcF941a8dEb257d7F29c72e06871139Fc7e",
 
 
-
+    "testnet-assetChain-verify-btc": "npx hardhat verify --contract contracts/dependencies/BTC.sol:BTC --network assetChainTestnet    0x94FA6257c3B182D71f88B85294B5C771451B7a69",
+    "testnet-assetChain-verify-eth": "npx hardhat verify --contract contracts/dependencies/ETH.sol:ETH --network assetChainTestnet   0x870954612eb55232423760593eE3A1d283aC7B93",
+    "testnet-assetChain-verify-link": "npx hardhat verify --contract contracts/dependencies/LINK.sol:LINK --network assetChainTestnet   0x98F3bc937aB52d5B54BF4eBD7BaB8746eC14A159",
+    "testnet-assetChain-verify-usdt": "npx hardhat verify --contract contracts/dependencies/USDT.sol:USDT --network assetChainTestnet   0xb47Eda1D52C6c09dCa6F83Acd7E3eCA576f000dC",
+    "testnet-assetChain-verify-usdc": "npx hardhat verify --contract contracts/dependencies/USDC.sol:USDC --network assetChainTestnet   0x46Be9CcF941a8dEb257d7F29c72e06871139Fc7e"
   },
   "keywords": [],
   "author": "",

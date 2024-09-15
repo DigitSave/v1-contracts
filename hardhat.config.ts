@@ -13,10 +13,15 @@ const config: HardhatUserConfig = {
       url: secret.liskTestnetRPC,
       accounts: [secret.privateKeyTestnet],
     },
+    assetChainTestnet: {
+      url: secret.assetChainTestnetRPC,
+      accounts: [secret.privateKeyTestnet],
+    },
   },
   etherscan: {
     apiKey: {
       liskTestnet: secret.listscanAPI,
+      assetChainTestnet: secret.assetChainAPI,
     },
     customChains: [
       {
@@ -25,6 +30,14 @@ const config: HardhatUserConfig = {
         urls: {
           apiURL: "https://sepolia-blockscout.lisk.com/api",
           browserURL: "https://sepolia-blockscout.lisk.com"
+        }
+      },
+      {
+        network: "assetChainTestnet",
+        chainId: 42421,
+        urls: {
+          apiURL: "https://scan-testnet.assetchain.org//api",
+          browserURL: "https://scan-testnet.assetchain.org/" 
         }
       }
     ]
@@ -36,3 +49,4 @@ const config: HardhatUserConfig = {
 };
 
 export default config;
+

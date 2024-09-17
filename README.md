@@ -3,7 +3,7 @@
 # Smart Contracts Deployed on Different Chains and Networks
 
 
-## Lisk Network
+## Asset Chain Network
 
 
 ### Testnet
@@ -15,20 +15,20 @@
 - **WETH**: `0x870954612eb55232423760593eE3A1d283aC7B93`,
 - **LINK**: `0x98F3bc937aB52d5B54BF4eBD7BaB8746eC14A159`
 
-## Get your testnet token on Lisk 
-- [Visit Third web faucet to get Lisk testnet ETH](https://thirdweb.com/lisk-sepolia-testnet)
+## Get your testnet token on Asset Chain 
+- [Visit Asset Chain faucet to get $RWA](https://faucet.assetchain.org/)
 
-## Guide to mint our test tokens on lisk - [USDT,USDC,WBTC,WETH,LINK]
+## Guide to mint our test tokens on Asset Chain - [USDT,USDC,WBTC,WETH,LINK]
 - Visit any of the link below 
   - - Connect Your wallet
   - - find the mint function 
   - - Enter your wallet address as the (to)
   - - Enter the number (1000000000000000000000) to mint 1000 pieces of any token
-- [Mint USDT](https://sepolia-blockscout.lisk.com/address/0xb47Eda1D52C6c09dCa6F83Acd7E3eCA576f000dC?tab=write_contract)
-- [Mint USDC](https://sepolia-blockscout.lisk.com/address/0x46Be9CcF941a8dEb257d7F29c72e06871139Fc7e?tab=write_contract)
-- [Mint WBTC](https://sepolia-blockscout.lisk.com/address/0x94FA6257c3B182D71f88B85294B5C771451B7a69?tab=write_contract)
-- [Mint WETH](https://sepolia-blockscout.lisk.com/address/0x870954612eb55232423760593eE3A1d283aC7B93?tab=write_contract)
-- [Mint LINK](https://sepolia-blockscout.lisk.com/address/0x98F3bc937aB52d5B54BF4eBD7BaB8746eC14A159?tab=write_contract)
+- [Mint USDT](https://scan-testnet.assetchain.org/address/0xb47Eda1D52C6c09dCa6F83Acd7E3eCA576f000dC?tab=write_contract#40c10f19)
+- [Mint USDC](https://scan-testnet.assetchain.org/address/0x46Be9CcF941a8dEb257d7F29c72e06871139Fc7e?tab=write_contract#40c10f19)
+- [Mint WBTC](https://scan-testnet.assetchain.org/address/0x94FA6257c3B182D71f88B85294B5C771451B7a69?tab=write_contract#40c10f19)
+- [Mint WETH](https://scan-testnet.assetchain.org/address/0x870954612eb55232423760593eE3A1d283aC7B93?tab=write_contract#40c10f19)
+- [Mint LINK](https://scan-testnet.assetchain.org/address/0x98F3bc937aB52d5B54BF4eBD7BaB8746eC14A159?tab=write_contract#40c10f19)
 
 ## Base Network
 
